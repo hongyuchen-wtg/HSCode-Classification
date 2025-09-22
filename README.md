@@ -22,7 +22,7 @@ The service is deployed at:
 
 Sample Req
 ```
-GET http://au2sp-ssql-409a.sand.wtg.zone:8081/query?query=steel%26hollowknights&resultFormat=API
+GET http://au2sp-ssql-409a.sand.wtg.zone:8081/query?query=steel%26hollowknight
 ```
 
 Sample Resp
@@ -60,3 +60,4 @@ Sample Resp
   }
 ]
 ```
+
