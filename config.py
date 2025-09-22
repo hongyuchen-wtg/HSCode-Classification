@@ -6,7 +6,7 @@ os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-SEPARATOR = "&"
+SEPARATOR = "|"
 
 # Server Ports
 UI_PORT = 8080
