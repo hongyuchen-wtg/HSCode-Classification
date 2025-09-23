@@ -1,3 +1,9 @@
+<!--
+ * @Author: Puffrora
+ * @Date: 2025-09-22 15:48:12
+ * @LastEditors: Puffrora
+ * @LastEditTime: 2025-09-23 15:14:24
+-->
 # HS Code Search Service
 
 This project is a web-based HS Code search service that uses text similarity to match descriptions to relevant HS codes. It provides both:
@@ -62,3 +68,15 @@ Sample Resp
   }
 ]
 ```
+
+---
+
+## Local Test
+
+Need to download `datasets.zip` / `models.zip` / `vectors.zip` (optional) firstly then unzip each one to the project's root directory:
+
+- **Datasets**: [http://au2sp-ssql-409a.sand.wtg.zone:8081/download/datasets.zip](http://au2sp-ssql-409a.sand.wtg.zone:8081/download/datasets.zip)  
+- **Models**: [http://au2sp-ssql-409a.sand.wtg.zone:8081/download/models.zip](http://au2sp-ssql-409a.sand.wtg.zone:8081/download/models.zip)  
+- **Vectors** (optional): [http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip](http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip)
+
+---

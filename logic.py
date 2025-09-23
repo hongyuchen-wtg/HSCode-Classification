@@ -97,7 +97,8 @@ def batch_query(texts, index, descriptions, hscodes, top_k=1):
     return batch_results
 
 
-def formatted_result_for_UI(batch_results):
+def formatted_result_for_UI(batch_results, time_cost):
+    timeCostText = f"### Time Cost on {len(batch_results)} Querie(s): {time_cost:.4f} ms\n\n"
     queryResultTextList = []
     for text, results in batch_results:
         queryResultText = f"### Query: {text}\n"
@@ -106,14 +107,16 @@ def formatted_result_for_UI(batch_results):
             queryResultText += f"\n{res['description'].replace('`', '')}"
             queryResultText += F"\nConfidence Score (Cos sim): {res['score']:.4f}\n"
         queryResultTextList.append(queryResultText)
-    return "\n".join(queryResultTextList)
+
+    return timeCostText + "\n".join(queryResultTextList)
 
 
-def formatted_result_for_API(batch_results):
+def formatted_result_for_API(batch_results, time_cost):
     formatted_results = []
     for text, results in batch_results:
         entry = {
             "query": text,
+            "time_cost": f"{round(time_cost, 4)} ms",
             "predictions": []
         }
         for res in results:
@@ -123,6 +126,7 @@ def formatted_result_for_API(batch_results):
                 "confidence_score": round(res['score'], 4)
             })
         formatted_results.append(entry)
+
     return formatted_results
 
 
@@ -132,10 +136,9 @@ def HSCodeSearch(index, descriptions, hscodes, query_text, resultFormat=config.R
         return "No valid query provided."
     start = time.time()
     batch_results = batch_query(queries, index, descriptions, hscodes, top_k)
-    end = time.time()
-    timeCostText = f"### Time Cost on {len(queries)} Querie(s): {end - start:.4f} s\n\n"
+    time_cost = (time.time() - start) * 1000
 
     if resultFormat == config.RESULT_FORMAT_UI:
-        return timeCostText + formatted_result_for_UI(batch_results)
+        return formatted_result_for_UI(batch_results, time_cost)
     elif resultFormat == config.RESULT_FORMAT_API:
-        return formatted_result_for_API(batch_results)
+        return formatted_result_for_API(batch_results, time_cost)
