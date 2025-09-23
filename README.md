@@ -26,6 +26,7 @@ The service is deployed at:
 
 ### 1. API Usage (Port 8081)
 
+#### 1. `Query` API
 Sample Req
 ```
 GET http://au2sp-ssql-409a.sand.wtg.zone:8081/query?query=steel|hollow knight
@@ -69,6 +70,13 @@ Sample Resp
 ]
 ```
 
+#### 2. `Download` API
+
+Sample Req
+```
+GET http://au2sp-ssql-409a.sand.wtg.zone:8081/download/datasets.zip
+```
+
 ---
 
 ## Local Test
@@ -80,4 +88,5 @@ Need to download `datasets.zip` / `models.zip` / `vectors.zip (optional)` firstl
 - **Vectors** (optional): [http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip](http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip)
 
 ---
+
 
