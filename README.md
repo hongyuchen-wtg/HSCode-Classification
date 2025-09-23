@@ -12,7 +12,7 @@ This project is a web-based HS Code search service that uses text similarity to 
 The service is deployed at:
 
 - **UI Access (Web App)**: [http://au2sp-ssql-409a.sand.wtg.zone:8080](http://au2sp-ssql-409a.sand.wtg.zone:8080)  
-- **API Endpoint**: [http://au2sp-ssql-409a.sand.wtg.zone:8081/query](http://au2sp-ssql-409a.sand.wtg.zone:8081/query)
+- **API Endpoint**: [http://au2sp-ssql-409a.sand.wtg.zone:8081](http://au2sp-ssql-409a.sand.wtg.zone:8081)
 
 ---
 
@@ -82,6 +82,7 @@ Need to download `datasets.zip` / `models.zip` / `vectors.zip (optional)` firstl
 - **Vectors** (optional): [http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip](http://au2sp-ssql-409a.sand.wtg.zone:8081/download/vectors.zip)
 
 ---
+
 
 
 
