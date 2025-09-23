@@ -17,7 +17,7 @@ def preprocess():
     h0descriptions = df['h0description'].astype(str).tolist()
     h1descriptions = df['h1description'].astype(str).tolist()
     descriptions = [f"h0Description:{h0.strip()}\nh1Description:{h1.strip()}".strip() for h0, h1 in zip(h0descriptions, h1descriptions) if pd.notna(h0) or pd.notna(h1)]
-    print(descriptions[:5], hscodes[:5])
+    # print(descriptions[:5], hscodes[:5])
 
     embeddings = model.encode(descriptions, convert_to_numpy=True, show_progress_bar=True)
 

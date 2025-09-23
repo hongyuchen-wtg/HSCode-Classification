@@ -13,10 +13,10 @@ UI_PORT = 8080
 API_PORT = 8081
 
 # Model
-MODEL_NAME = 'intfloat--e5-base-v2' # BAAI/bge-m3 / MiniLM-L6-v2 / intfloat/e5-base-v2
+MODEL_NAME = 'fine_tuned_intfloat--e5-base-v2' # BAAI/bge-m3 / MiniLM-L6-v2 / intfloat/e5-base-v2
 FINETUNED_MODEL_NAME = f'fine_tuned_{MODEL_NAME}'
-MODEL_PATH = os.path.join(BASE_PATH, "model", MODEL_NAME)
-FINETUNED_MODEL_PATH = os.path.join(BASE_PATH, "model", FINETUNED_MODEL_NAME)
+MODEL_PATH = os.path.join(BASE_PATH, "models", MODEL_NAME)
+FINETUNED_MODEL_PATH = os.path.join(BASE_PATH, "models", FINETUNED_MODEL_NAME)
 
 # Dataset
 DATASET = 'NZCClassification'

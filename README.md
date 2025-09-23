@@ -1,9 +1,3 @@
-<!--
- * @Author: Puffrora
- * @Date: 2025-09-22 15:48:12
- * @LastEditors: Puffrora
- * @LastEditTime: 2025-09-23 09:37:57
--->
 # HS Code Search Service
 
 This project is a web-based HS Code search service that uses text similarity to match descriptions to relevant HS codes. It provides both:

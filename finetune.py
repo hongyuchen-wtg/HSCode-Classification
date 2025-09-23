@@ -7,8 +7,8 @@ def FineTune():
     model = SentenceTransformer(config.MODEL_PATH)
 
     train_examples = [
-        InputExample(texts=["Hollow Knight", "Metroidvania Video Games"], label=0.9),
-        InputExample(texts=["Hollow Knight", "Food such as beef steak"], label=0.1),
+        InputExample(texts=["razer game mouse", "automatic data processing machines"], label=0.95),
+        InputExample(texts=["razer game mouse", "gaming machines"], label=0.1),
     ]
 
     train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=16)
@@ -17,7 +17,7 @@ def FineTune():
 
     model.fit(
         train_objectives=[(train_dataloader, train_loss)],
-        epochs=3,
+        epochs=1000,
         warmup_steps=100,
         output_path=config.FINETUNED_MODEL_PATH
     )
